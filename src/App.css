@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+
+
+:root{
+    --marron: #603C28;
+    --verde: #006400;
+    --azulOscuro: #00425A;
+    --negro: #181823;
+    --blanco: #F4F1E8;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: radial-gradient(var(--blanco), 85%, var(--marron));
+    color: var(--negro);
+}
+h1, h2, h3{
+    font-family: 'Belanosima', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.section-padding{
+    padding: 50px 0;
+}
+h2{
+    font-size: 50px;
+}
+.btn-success{
+    background-color: var(--marron)!important;
+    border: 1px var(--negro);
+    box-shadow: 5px 5px 5px grey;
+}
+.btn-success:hover{
+    background-color: var(--verde)!important;
+    box-shadow: none;
+    
+}
+
+/*NavBar*/
+
+.nav-link:hover{
+    background: var(--marron);
+    border-radius: 10px;
+    transition: 0.5s all ease-in-out;
+}
+.navbar{
+    background: var(--verde)!important;
+    
+}
+.logo{
+    max-height: 3%;
+    min-height: 50px;
+    max-width: 3%;
+    min-width: 50px;
+    margin-right: 10px;
+}
+
+/*carrusel*/
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.w-100{
+    height: 100vh;
+}
+
+/*nosotros*/
+
+.textoSobre{
+    text-align: left;
+}
+.img-sobre{
+    display: flex;
+    align-items: center;
+}
+
+/*Desempeño*/
+
+i {
+	font-size: 50px;
+}
+#cajaServicio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+/*Avance*/
+
+.propuesta{
+    padding: 50px;
+}
+#cajaLogro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+/*Concilio*/
+
+.concilio .card-body i {
+	font-size: 20px;
+}
+.yellow{
+	background: rgb(243, 219, 63);
+	height: 3vh;
+	border-radius: 5px;
+	padding: 2px;
+	font-weight: 600;
+}
+.red{
+	background: rgb(231, 32, 32);
+	height: 3vh;
+	border-radius: 5px;
+	padding: 2px;
+	font-weight: 600;
+}
+.card-text{
+	padding-top: 10%;
+}
+.botonConcilio{
+	padding-top: 5%;
+}
+
+/*Footer*/
+
+.footer{
+    background-color: var(--verde);
+    color: var(--blanco);
+    max-height: 240px;
+    box-sizing: border-box;
+    padding: 2%;
+}
+.redes img{
+    height: 30px;
+    
+}
+.sociales{
+    padding: 2%;  
+    justify-content: center;
+    display: flex;
+}
+.noPadding p{
+    margin-bottom: 4px;
+}
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 97px;
+    width: 122px;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 97px;
+    width: 122px;
+}
+.sociales{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 0.5rem;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.carousel-caption {
+		bottom: 370px;
+		height: 10vh;
+	}
+	.carousel-caption p {
+		width: 100%;
+	}
+    .d-none {
+		display:inline-block !important;
+	}
+}
+@media only screen and (max-width: 767px) {
+	
+	.carousel-caption {
+		bottom: 125px;
+		height: 35vh;
+	}
+	.carousel-caption h5 {
+		font-size: 17px;
+	}
+	.carousel-caption a {
+		padding: 10px 15px;
+		font-size: 15px;
+	}
+	.carousel-caption p {
+		width: 100%;
+		line-height: 1.6;
+		font-size: 12px;
+	}
+    .d-none {
+		display:inline-block !important;
+	}
+    .card {
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (max-width: 450px) {
+    .carousel-caption {
+         height: 35vh
+    }
+    .d-none {
+		display:inline-block !important;
+	}
+    h1, h2{
+        font-size: xx-large;
+    }
+
+}
+@media only screen and (min-width: 451px) and (max-width: 575px) {
+    .carousel-caption {
+        height: 35vh
+    }
+    .d-none {
+		display:inline-block !important;
+	}
+}
+@media only screen and (max-width: 992px) {
+    h2{
+        text-align: center;
+    }
+    .footer{
+        max-height: 380px;
+        text-align: center;
+    }
+    .mapouter{
+        margin: auto;
+    }
+    .navbar-toggler{
+        margin: 0px 30px;
+    }
+    .textoSobre{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    
+}
+@media only screen and (max-width: 600px) {
+    .section-padding{
+        padding: 40px 20px;
+    }
+    .footer{
+        max-height: 420px;
+    }
+}
+@media only screen and (min-width: 500px) {
+    
+    .card {
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (max-width: 320px){
+    .navbar-brand span{
+        display: none;
+    }
+    .navbar-brand img{
+        margin-left: 20px;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 390px){
+    .navbar-brand span{
+        font-size: 16px;
+    }
+}
