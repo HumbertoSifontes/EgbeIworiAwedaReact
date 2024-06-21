@@ -8,13 +8,19 @@ import { Link } from 'react-router-dom'
 const Concile = () => {
   return (
     <section className="concilio section-padding" id="concilio">
-		<div className="container">
+		<div className="container miniSectionServices">
 			<div className="row">
 				<div className="col-md-12">
 					<div className="section-header text-center pb-5">
-						<h2>Concilio Ifa</h2>
-						<p>Nuestro Egbe obedece a una estructura jerarquica de un Concilio Ifa. <br/>
-							Algunos de los integrantes:
+						<h2 className='pb-5'>Concilio Ifa</h2>
+						<p>Nuestro Egbe Iwori Aweda obedece a una estructura jerárquica 
+							de un Concilio Ifá, compuesta por 16 roles clave que aseguran 
+							el funcionamiento armonioso y la preservación de nuestras 
+							tradiciones espirituales y culturales. Liderado por el Oluwo, 
+							la autoridad suprema en decisiones importantes y ceremonias 
+							esenciales, nuestro concilio sigue el linaje Akinwande de Abeokuta, 
+							Nigeria. Conoce más sobre los integrantes y el funcionamiento de 
+							nuestro Concilio Ifá:
 						</p>
 					</div>
 				</div>

@@ -1,29 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// src/App.jsx
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/parts/NavBar'
-import Footer from './components/parts/Footer'
-import Avance from './components/pages/Avance'
-import Inicio from './components/pages/Inicio'
-import Nosotros from './components/pages/Nosotros'
-import Desempeño from './components/pages/Desempeño'
-import Concilio from './components/pages/Concilio'
+import ScrollToTop from './components/scroll-to-top';
+import AppContent from './AppContent';
 
 function App() {
   return (
     <div>
       <Router>
-        <Navbar/>
-        <Routes>
-          <Route path='/' element={<Inicio/>}/>
-          <Route path='/nosotros' element={<Nosotros/>}/>
-          <Route path='/desempeño' element={<Desempeño/>}/>
-          <Route path='/avance' element={<Avance/>}/>
-          <Route path='/concilio' element={<Concilio/>}/>
-        </Routes>
-        <Footer/>
+        <ScrollToTop />
+        <AppContent />
       </Router>
-      
     </div>
   );
 }
