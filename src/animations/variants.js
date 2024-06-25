@@ -4,6 +4,7 @@ export const fadeIn = (direction, delay) => {
         y: direction === 'up' ? 80 : direction === 'down' ? -80 : 0,
         opacity: 0,
         x: direction === 'left' ? 80 : direction === 'right' ? -80 : 0,
+        z: direction === 'forward' ? 100 : direction === 'backward' ? -100 : 0,
         transition: {
           type: 'tween',
           duration: 1.5,
@@ -14,6 +15,7 @@ export const fadeIn = (direction, delay) => {
       show: {
         y: 0,
         x: 0,
+        z: 0,
         opacity: 1,
         transition: {
           type: 'tween',

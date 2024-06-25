@@ -1,0 +1,5 @@
+1) El .active en el navbar de "servicios"
+2) Acomodar en diseño de la landing
+3) Meterle las transiciones con framer-motion
+4) Meterle animacion con framer-motion
+5) Hacer la pagina de "citas"

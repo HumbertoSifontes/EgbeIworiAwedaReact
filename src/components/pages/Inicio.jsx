@@ -7,6 +7,8 @@ import Concile from '../parts/Concile'
 import Appoinment from './appointment'
 import FondoDerecho from '../images/fondoLateral1.png'
 import FondoSuperior from '../images/ide.png'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../animations/variants'
 
 const Home = () => {
   return (
@@ -96,12 +98,12 @@ const Home = () => {
       </div>
     </div>
     <Appoinment/>
-    <div className="fondoLateral1">
+    <motion.div className="fondoLateral1" variants={fadeIn('right', 0.2)} initial='hidden' animate='show' exit='hidden'>
       <img src={FondoDerecho} alt="esu" />
-    </div>
-    <div className="fondoLateral3">
+    </motion.div>
+    <motion.div className="fondoLateral3" variants={fadeIn('right', 0.2)} initial='hidden' animate='show' exit='hidden'>
       <img src={FondoSuperior} alt="ide" />
-    </div>
+    </motion.div>
     </>
   )
 }

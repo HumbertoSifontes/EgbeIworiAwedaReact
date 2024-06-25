@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import simboloEgbe from '../images/simbolo-egbe.png';
 import { Link, useLocation } from 'react-router-dom';
+import DarkMode from '../../animations/DarkMode'
 
 function Navbar() {
   const location = useLocation();
@@ -29,7 +30,7 @@ function Navbar() {
             height={24}
             className="d-inline-block align-text-left logo"
           />
-          <span>Egbe Iwori Aweda</span>
+          <span className='textoNav'>Egbe Iwori Aweda</span>
         </Link>
         <button
           className="navbar-toggler"
@@ -84,6 +85,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className={getNavLinkClass('/login')} to="/login" onClick={handleNavLinkClick}>Ingresa</Link>
+            </li>
+            <li className="nav-item">
+              <DarkMode />
             </li>
           </ul>
         </div>

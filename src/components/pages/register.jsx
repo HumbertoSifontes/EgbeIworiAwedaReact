@@ -52,7 +52,7 @@ const Registration = () => {
               <div className="mb-3">
                 <label htmlFor="rol" className="form-label fw-bold">Rol</label>
                 <select className="form-control" id="rol" name="rol" value={formData.rol} onChange={handleChange} required>
-                  <option value="" disabled selected>Escoge uno...</option>
+                  <option value="" disabled>Escoge uno...</option>
                   <option value="visitante">Visitante</option>
                   <option value="isefa">Isefa</option>
                   <option value="babalawo">Babalawo</option>
@@ -75,7 +75,7 @@ const Registration = () => {
                 <label htmlFor="confirmacionContraseña" className="form-label fw-bold">Confirmación de Contraseña</label>
                 <input type="password" className="form-control" id="confirmacionContraseña" name="confirmacionContraseña" value={formData.confirmacionContraseña} onChange={handleChange} required/>
               </div>
-              <p class="botonConcilio text-center"><input class="enviar btn btn-success d-grid gap-2 col-6 mx-auto text-white" type="submit" value="Enviar"/></p>
+              <p className="botonConcilio text-center"><input className="enviar btn btn-success d-grid gap-2 col-6 mx-auto text-white" type="submit" value="Enviar"/></p>
             </form>
           </div>
         </div>

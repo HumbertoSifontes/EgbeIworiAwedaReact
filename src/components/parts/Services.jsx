@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../animations/variants'
 
 const Services = () => {
     return (
@@ -9,24 +11,28 @@ const Services = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="section-header text-center pb-5">
-                                <h2 className='pb-5'>Desempeño</h2>
-                                <p>
-                                    En el Egbe Iwori Aweda, ofrecemos una variedad de servicios 
-                                    espirituales de la religión Yoruba, desde consultas de adivinación 
-                                    y ceremonias de Esentaye, hasta iniciaciones en Ifá, ofrendas 
-                                    a los Orisa y limpiezas espirituales. Sumérgete en una experiencia 
-                                    transformadora y conecta con nuestras tradiciones ancestrales. 
-                                    Embarcarte en un viaje espiritual que transformará tu vida, te 
-                                    invitamos a conocer más sobre nuestros servicios. Descubre cómo 
-                                    nuestras ceremonias y rituales pueden ayudarte a encontrar la paz 
-                                    y el propósito que buscas.
-                                </p>
+                                <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                                    <h2 className='pb-5'>Desempeño</h2>
+                                </motion.div>
+                                <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                                    <p>
+                                        En el Egbe Iwori Aweda, ofrecemos una variedad de servicios 
+                                        espirituales de la religión Yoruba, desde consultas de adivinación 
+                                        y ceremonias de Esentaye, hasta iniciaciones en Ifá, ofrendas 
+                                        a los Orisa y limpiezas espirituales. Sumérgete en una experiencia 
+                                        transformadora y conecta con nuestras tradiciones ancestrales. 
+                                        Embarcarte en un viaje espiritual que transformará tu vida, te 
+                                        invitamos a conocer más sobre nuestros servicios. Descubre cómo 
+                                        nuestras ceremonias y rituales pueden ayudarte a encontrar la paz 
+                                        y el propósito que buscas.
+                                    </p>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
                     <div className="row gy-3">
-                        <div className="col-12 col-md-12 col-lg-4">
-                            <div className="card text-center bg-dark pb-2 intentoCard">
+                        <motion.div className="col-12 col-md-12 col-lg-4" variants={fadeIn('up', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                            <div className="card text-center pb-2 intentoCard">
                                 <div className="card-body d-flex flex-column justify-content-between align-items-center">
                                     <div className="row mb-3 gradientText">
                                         <i className="bi bi-chat"></i>
@@ -43,9 +49,9 @@ const Services = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-12 col-md-12 col-lg-4">
-                            <div className="card text-white text-center bg-dark pb-2 intentoCard">
+                        </motion.div>
+                        <motion.div className="col-12 col-md-12 col-lg-4" variants={fadeIn('up', 0.4)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                            <div className="card text-white text-center pb-2 intentoCard">
                                 <div className="card-body d-flex flex-column justify-content-between align-items-center">
                                     <div className="row mb-3 gradientText">
                                         <i className="bi bi-award"></i>
@@ -62,9 +68,9 @@ const Services = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-12 col-md-12 col-lg-4">
-                            <div className="card text-center bg-dark pb-2 intentoCard">
+                        </motion.div>
+                        <motion.div className="col-12 col-md-12 col-lg-4" variants={fadeIn('up', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                            <div className="card text-center pb-2 intentoCard">
                                 <div className="card-body d-flex flex-column justify-content-between align-items-center">
                                     <div className="row mb-3 gradientText">
                                         <i className="bi bi-shield"></i>
@@ -81,7 +87,7 @@ const Services = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="row pt-5">
                         <div className="col-md-12">
@@ -95,7 +101,11 @@ const Services = () => {
                                     tu conexión espiritual mediante la iniciación en Ifá (Itefa) o Isefa, 
                                     estamos aquí para guiarte en tu camino.
                                 </p>
-                                <a className='ctaText' href="#contact"><h1 className='pb-2 ctaText'>¡Agenda una Cita Hoy Mismo!</h1></a>
+                                <div style={{ perspective: 360 }}>
+                                    <motion.div variants={fadeIn('backward', 0.1)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
+                                        <a className='ctaText' href="#contact"><h1 className='pb-2 ctaText'>¡Agenda una Cita Hoy Mismo!</h1></a>
+                                    </motion.div>
+                                </div >
                                 <div className="d-flex justify-content-center">
                                     <a href="#contact"><div className="flecha"></div></a>
                                 </div>

@@ -13,6 +13,7 @@ import Concilio from './components/pages/Concilio';
 import LogIn from './components/pages/LogIn';
 import Registration from './components/pages/register';
 import Contacto from './components/pages/Contacto';
+import Fetivales from './components/parts/Fetivales';
 import Transition from '../src/animations/transitions'; // Ajusta la ruta si es necesario
 
 function AppContent() {
@@ -27,6 +28,8 @@ function AppContent() {
                         <Route path='/' element={<Inicio />} />
                         <Route path='/nosotros' element={<Nosotros />} />
                         <Route path='/servicios' element={<Desempeño />} />
+                        <Route path='/avance/:albumId/:year' element={<Fetivales />} />
+                        <Route path='/avance/:albumId' element={<Fetivales />} />
                         <Route path='/avance' element={<Avance />} />
                         <Route path='/concilio' element={<Concilio />} />
                         <Route path='/login' element={<LogIn />} />

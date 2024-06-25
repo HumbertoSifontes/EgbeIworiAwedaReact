@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../animations/variants'
 import Modal from 'react-modal';
 import oluwo from '../images/oluwo.jpg';
 import aseda from '../images/aseda.jpg';
@@ -17,6 +19,8 @@ import surepawo from '../images/surepawo.jpg';
 import balogun from '../images/balogun.jpg';
 import FondoIzquierdo from '../images/opele.png'
 import FondoSuperior from '../images/ide.png'
+
+Modal.setAppElement('#root');
 
 const characterData = [
   {
@@ -379,34 +383,38 @@ const Concile = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="section-header  pb-5">
-                <h2 className='text-center pb-5'>Concilio Ifa</h2>
-                <p className='text-left'>
-                  El concilio de un Ilé en la religión yoruba, se compone de una estructura jerárquica que incluye 16 roles clave, 
-                  cada uno con responsabilidades específicas que aseguran el funcionamiento armonioso y 
-                  la preservación de las tradiciones espirituales y culturales del grupo. Este concilio 
-                  está liderado por el Oluwo, el líder principal y más experimentado, quien tiene la 
-                  autoridad suprema en todas las decisiones importantes y dirige las ceremonias esenciales. 
-                  El egbe iwori Aweda se rige bajo el linaje Akinwande con base en Nigeria particularmente 
-                  en la región de Abeokuta <br /> <br />
-                  <strong>Funciones de los 16 Mayores</strong><br /><br />
-                  <strong>Adivinación y Consultas: </strong> Realizan consultas de Ifá para individuos 
-                  y la comunidad, usando el sistema de adivinación Ifá.<br />
-                  <strong>Resolución de Conflictos: </strong> Actúan como mediadores y jueces en disputas 
-                  dentro de la comunidad.<br />
-                  <strong>Guía Espiritual: </strong> Proporcionan orientación espiritual y ayudan en la 
-                  interpretación de mensajes divinos.<br />
-                  <strong>Enseñanza y Formación: </strong> Transmiten conocimientos a los nuevos iniciados 
-                  y aseguran la continuidad de las tradiciones yorubas.<br />
-                  <strong>Ceremonias y Rituales: </strong> Dirigen y supervisan los rituales importantes, 
-                  asegurando que se realicen correctamente.<br />
-                </p>
+                <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <h2 className='text-center pb-5'>Concilio Ifa</h2>
+                </motion.div>
+                <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <p className='text-left'>
+                    El concilio de un Ilé en la religión yoruba, se compone de una estructura jerárquica que incluye 16 roles clave, 
+                    cada uno con responsabilidades específicas que aseguran el funcionamiento armonioso y 
+                    la preservación de las tradiciones espirituales y culturales del grupo. Este concilio 
+                    está liderado por el Oluwo, el líder principal y más experimentado, quien tiene la 
+                    autoridad suprema en todas las decisiones importantes y dirige las ceremonias esenciales. 
+                    El egbe iwori Aweda se rige bajo el linaje Akinwande con base en Nigeria particularmente 
+                    en la región de Abeokuta <br /> <br />
+                    <strong>Funciones de los 16 Mayores</strong><br /><br />
+                    <strong>Adivinación y Consultas: </strong> Realizan consultas de Ifá para individuos 
+                    y la comunidad, usando el sistema de adivinación Ifá.<br />
+                    <strong>Resolución de Conflictos: </strong> Actúan como mediadores y jueces en disputas 
+                    dentro de la comunidad.<br />
+                    <strong>Guía Espiritual: </strong> Proporcionan orientación espiritual y ayudan en la 
+                    interpretación de mensajes divinos.<br />
+                    <strong>Enseñanza y Formación: </strong> Transmiten conocimientos a los nuevos iniciados 
+                    y aseguran la continuidad de las tradiciones yorubas.<br />
+                    <strong>Ceremonias y Rituales: </strong> Dirigen y supervisan los rituales importantes, 
+                    asegurando que se realicen correctamente.<br />
+                  </p>
+                </motion.div>
               </div>
             </div>
           </div>
           <div className="row">
           {characterData.map((character, index) => (
-              <div key={index} className="col-12 col-md-6 col-lg-3 cardHover">
-                <div className="card text-left cardShadow" onClick={() => openModal(character)}>
+              <motion.div key={index} className="col-12 col-md-6 col-lg-3 cardHover" variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                <div className="card text-left cardShadow intentoCard3" onClick={() => openModal(character)}>
                   <div className="card-body">
                     <img alt={character.name} className="img-fluid rounded-circle" src={character.image} />
                     <h3 className="card-title py-2">{character.name}</h3>
@@ -416,14 +424,14 @@ const Concile = () => {
                     )}
                     <p className="card-text">{character.description}</p>
                     <p className="socials text-center">
-                      <i className="bi bi-twitter text-dark mx-1"></i> 
-                      <i className="bi bi-facebook text-dark mx-1"></i> 
-                      <i className="bi bi-whatsapp text-dark mx-1"></i> 
-                      <i className="bi bi-instagram text-dark mx-1"></i>
+                      <i className="bi bi-twitter mx-1"></i> 
+                      <i className="bi bi-facebook mx-1"></i> 
+                      <i className="bi bi-whatsapp mx-1"></i> 
+                      <i className="bi bi-instagram mx-1"></i>
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -461,31 +469,39 @@ const Concile = () => {
       </div>
       <section className='section-padding'>
         <div className='container miniSectionServices'>
-          <div className="row gy-5 pb-5 pt-5">
-            <p className="text-center">
-              A través de su experiencia, conocimiento y contribuciones significativas, estos líderes 
-              y figuras importantes han enriquecido la vida de nuestra comunidad y han sido parte fundamental 
-              en el crecimiento continuo de Egbe Iwory Aweda. Su guía espiritual y compromiso con la 
-              tradición yoruba han dejado un legado valioso para las generaciones presentes y futuras. <br />
-              A través de nuestra asistencia, estamos listos para extender una mano amiga a todo aquel que lo 
-              necesita. Nuestra pasión y compromiso en Egbe Iwory Aweda radican en ser guías en tu viaje 
-              espiritual, brindándote herramientas y conocimiento para que puedas enfrentar los desafíos con 
-              confianza y claridad. <br />
-              Contactanos para saber mas como podemos guiarte!
-            </p>
+          <div className="row gy-5 pb-5 pt-5" style={{ perspective: 360 }}>
+            <motion.div variants={fadeIn('backward', 0.2)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
+              <p className="text-center">
+                A través de su experiencia, conocimiento y contribuciones significativas, estos líderes 
+                y figuras importantes han enriquecido la vida de nuestra comunidad y han sido parte fundamental 
+                en el crecimiento continuo de Egbe Iwory Aweda. Su guía espiritual y compromiso con la 
+                tradición yoruba han dejado un legado valioso para las generaciones presentes y futuras. <br />
+                A través de nuestra asistencia, estamos listos para extender una mano amiga a todo aquel que lo 
+                necesita. Nuestra pasión y compromiso en Egbe Iwory Aweda radican en ser guías en tu viaje 
+                espiritual, brindándote herramientas y conocimiento para que puedas enfrentar los desafíos con 
+                confianza y claridad. <br />
+                Contactanos para saber mas como podemos guiarte!
+              </p>
+            </motion.div>
           </div>
-          <div className="row gy-5">
-            <h1 className='pb-2 ctaText text-center'>¡Agenda una Cita Hoy Mismo!</h1>
-            <Link to="/contact" className="btn btn-success d-grid gap-2 col-6 mx-auto text-white cta">Contactanos</Link>
+          <div className="row gy-5" style={{ perspective: 360 }}>
+            <motion.div variants={fadeIn('backward', 0.4)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
+              <Link className='ctaText' to="/contact"><h1 className='pb-5 ctaText text-center'>¡Agenda una Cita Hoy Mismo!</h1></Link>
+            </motion.div>
+          </div >
+          <div className="row gy-5" style={{ perspective: 360 }}>
+            <motion.div variants={fadeIn('backward', 0.6)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
+              <Link to="/contact" className="btn btn-success d-grid gap-2 col-6 mx-auto text-white cta">Contactanos</Link>
+            </motion.div>
           </div>
         </div>
       </section>
-    <div className="fondoLateral5">
-      <img src={FondoIzquierdo} alt="ikin" />
-    </div>
-      <div className="fondoLateral3">
+      <motion.div className="fondoLateral5" variants={fadeIn('up', 0.4)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+        <img src={FondoIzquierdo} alt="ikin" />
+      </motion.div>
+      <motion.div className="fondoLateral3" variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
         <img src={FondoSuperior} alt="ide" />
-      </div>
+      </motion.div>
     </>
   );
 };

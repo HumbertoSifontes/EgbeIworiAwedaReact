@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../animations/variants'
 
 const Appoinment = () => {
   const [countries, setCountries] = useState([]);
@@ -36,7 +38,7 @@ const Appoinment = () => {
       .catch(error => console.error('Error fetching countries:', error));
   }, []);
 
-  // Fetch states data when a country is selected
+  // Fetch estados cuando un pais es seleccionado
   useEffect(() => {
     if (selectedCountry) {
       const countryCode = selectedCountry.toUpperCase();
@@ -119,27 +121,58 @@ const Appoinment = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="section-header pb-5">
-                <h2 className='text-center pb-5'>Contactanos</h2>
-                <p className='text-left'>Egbe Iwori Aweda es un templo de Ifá tradicional ubicado en Puerto Píritu – Venezuela
-                  y Bogotá – Colombia. <br /> Ofrecemos consultas, ceremonias y otros servicios espirituales 
-                  para ayudar a las personas a encontrar su camino en la vida.<br /><br /> Creemos que todos tenemos 
-                  un propósito en la vida, y que Ifá puede ayudarnos a descubrir ese propósito.<br /> A través 
-                  de la adivinación, los babalawos pueden proporcionar orientación y consejo, y ayudar a 
-                  las personas a tomar decisiones acertadas. <br /><br />
-                  Si estás buscando ayuda espiritual, o si quieres aprender más sobre la religión yoruba 
-                  tradicional, Egbe Iwori Aweda es el lugar perfecto para ti.<br /><br />
-                  Agenda tu cita hoy mismo de forma virtual por video llamada o presencial en 
-                  Puerto Píritu – Venezuela y Bogotá – Colombia y descubre lo que Ifá tiene reservado para ti.<br /><br />
-                  Además de nuestros servicios regulares, también ofrecemos festivales y ceremonias especiales. 
-                  En estos eventos, puedes aprender más sobre la cultura yoruba y la religión de Ifá.<br /><br />
-                  Las fechas de nuestros festivales están disponibles en nuestro calendario de festivales, si 
-                  te gustaría participar puedes agendar una cita en esta sección y nos pondremos en contacto contigo.
+                <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <h2 className='text-center pb-5'>Contactanos</h2>
+                </motion.div>
+                <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <p className='text-left'>
+                    Egbe Iwori Aweda es un templo de Ifá tradicional ubicado en Puerto Píritu – Venezuela
+                    y Bogotá – Colombia. <br /> Ofrecemos consultas, ceremonias y otros servicios espirituales 
+                    para ayudar a las personas a encontrar su camino en la vida.
                   </p>
+                </motion.div>
+                <br /><br />
+                <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <p className='text-left'>
+                    Creemos que todos tenemos 
+                    un propósito en la vida, y que Ifá puede ayudarnos a descubrir ese propósito.<br /> A través 
+                    de la adivinación, los babalawos pueden proporcionar orientación y consejo, y ayudar a 
+                    las personas a tomar decisiones acertadas.
+                  </p>
+                </motion.div>
+                <br /><br />
+                <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <p className='text-left'>
+                    Si estás buscando ayuda espiritual, o si quieres aprender más sobre la religión yoruba 
+                    tradicional, Egbe Iwori Aweda es el lugar perfecto para ti.
+                  </p>
+                </motion.div>
+                <br /><br />
+                <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <p className='text-left'>
+                    Agenda tu cita hoy mismo de forma virtual por video llamada o presencial en 
+                    Puerto Píritu – Venezuela y Bogotá – Colombia y descubre lo que Ifá tiene reservado para ti.
+                  </p>
+                </motion.div>
+                <br /><br />
+                <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <p className='text-left'>
+                    Además de nuestros servicios regulares, también ofrecemos festivales y ceremonias especiales. 
+                    En estos eventos, puedes aprender más sobre la cultura yoruba y la religión de Ifá.
+                  </p>
+                </motion.div>
+                <br /><br />
+                <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+                  <p className='text-left'>
+                    Las fechas de nuestros festivales están disponibles en nuestro calendario de festivales, si 
+                    te gustaría participar puedes agendar una cita en esta sección y nos pondremos en contacto contigo.
+                  </p>
+                </motion.div>
               </div>
             </div>
           </div>
           <div className="row m-0">
-            <div className="col-md-12 p-0 pt-4 pb-4">
+            <motion.div className="col-md-12 p-0 pt-4 pb-4" variants={fadeIn('up', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
               <form className="form-container" onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label>Nombre y Apellido:</label>
@@ -238,7 +271,7 @@ const Appoinment = () => {
                 </div>
                 <button type="submit" className="btn btn-success d-grid gap-2 col-6 mx-auto text-white">Enviar</button>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
