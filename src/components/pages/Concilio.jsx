@@ -92,7 +92,7 @@ const characterData = [
   },
   {
     name: 'Marsel Yousef',
-    secondName: '?',
+    secondName: 'Ifa Tokun',
     title: 'Agbongbon',
     highlightTitle: true,
     highlightedTitleContent: 'Gege Ogboni',
@@ -279,7 +279,7 @@ const characterData = [
         <strong>Experiencias: </strong> <br />
         2012: Me consagré como Babalawo en la línea afrocubana, siguiendo los preceptos de Ifá. <br />
         2013: Conocí a Guillermo Vega Ifa Lola Akinwande, quien se convirtió en mi Baba Ifa y me enseñó mucho sobre Ifá. <br />
-        2017: Realicé la homologación en la línea de Ifa tradicional, lo que me permitió profundizar en mi conocimiento de Ifá. <br />
+        2014: Realicé la homologación en la línea de Ifa tradicional, lo que me permitió profundizar en mi conocimiento de Ifá. <br />
         2019: Me consagré como Ogboni con el título de Gege en Abeokuta, África, de la mano del Araba Ifa Tope Akinwande. <br /><br />
         <strong>Logros: </strong> Más de 10 años de servicio activo y 
         comprometido con la religión de Ifá. Trabajo continuo para promover 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ParticlesBackground from '../../animations/Particles/particlesBackground';
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -29,6 +30,7 @@ const Registration = () => {
 
   return (
     <section className="section-padding" id="login">
+      <ParticlesBackground />
       <div className='form-container my-5 p-4 rounded'>
         <div className="row">
           <div className="col-12">
@@ -68,7 +70,7 @@ const Registration = () => {
                 <input type="date" className="form-control" id="fechaIniciacion" name="fechaIniciacion" value={formData.fechaIniciacion} onChange={handleChange}/>
               </div>
               <div className="mb-3">
-                <label htmlFor="contraseña" className="form-labe fw-bold">Contraseña</label>
+                <label htmlFor="contraseña" className="form-label fw-bold">Contraseña</label>
                 <input type="password" className="form-control" id="contraseña" name="contraseña" value={formData.contraseña} onChange={handleChange} required/>
               </div>
               <div className="mb-3">
