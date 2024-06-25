@@ -38,8 +38,6 @@ const Fetivales = () => {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   const [error, setError] = useState(null);
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
-  const size = useWindowSize();
 
   useEffect(() => {
     axios.get('https://humbertosifontes.github.io/JSON-Egbe/imagenes.json')
