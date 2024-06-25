@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-import Modal from 'react-modal';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../animations/variants';
 import Ogun from '../images/ogun.jpg'
@@ -40,7 +39,6 @@ const Fetivales = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [error, setError] = useState(null);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const size = useWindowSize();
 
   useEffect(() => {
@@ -85,18 +83,6 @@ const Fetivales = () => {
     navigate(`/avance/${selectedAlbum.id}`);
   };
 
-  const openModal = (photo) => {
-    if (size.width > 769) {
-      setSelectedPhoto(photo);
-      setModalIsOpen(true);
-    }
-  };
-
-  const closeModal = () => {
-    setSelectedPhoto(null);
-    setModalIsOpen(false);
-  };
-
   if (selectedAlbum && selectedYear) {
     const photos = selectedAlbum.fotosPorAño[selectedYear].map(photo => ({
       original: `https://humbertosifontes.github.io/JSON-Egbe/${photo.ruta}`,
@@ -110,22 +96,6 @@ const Fetivales = () => {
           <h2 className="text-center my-4">{selectedAlbum.name} - {selectedYear}</h2>
           <ImageGallery items={photos} />
         </div>
-        <Modal
-          isOpen={modalIsOpen}
-          onRequestClose={closeModal}
-          contentLabel="Photo Details"
-          className="ModalImg"
-          overlayClassName="Overlay"
-        >
-          {selectedPhoto && (
-            <div className="modal-content">
-              <button onClick={closeModal} className="close-button">X</button>
-              <div className="modal-body">
-                <img src={selectedPhoto.original} alt={selectedPhoto.thumbnail} className="modal-image" />
-              </div>
-            </div>
-          )}
-        </Modal>
       </div>
     );
   }
