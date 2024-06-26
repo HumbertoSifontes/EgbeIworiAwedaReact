@@ -714,6 +714,9 @@ i {
     margin: 0 auto;
     padding: 20px;
     background: var(--marronT);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border-radius: 5px;
 }
 
@@ -729,7 +732,8 @@ i {
 .react-tel-input .form-control {
     width: 280px!important;
 }
-.form-label{
+.form-label,
+.form-check-label{
     color: var(--parrafo);
 }
 .form-container {
@@ -737,6 +741,10 @@ i {
     margin: 0 auto;
     padding: 20px;
     background: var(--marronT);
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border-radius: 5px;
   }
   
@@ -860,7 +868,7 @@ i {
 .door1{
     background-color: var(--transitionColor);
     z-index: 50;
-    background-image: var(--transWideTop);
+    background-image: var(--transMobileTop);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: bottom ;
@@ -868,7 +876,7 @@ i {
 .door12{
     background-color: var(--transitionColor);
     z-index: 50;
-    background-image: var(--transWideBottom);
+    background-image: var(--transMobileBottom);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: top;

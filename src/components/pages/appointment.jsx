@@ -175,15 +175,15 @@ const Appoinment = () => {
             <motion.div className="col-md-12 p-0 pt-4 pb-4" variants={fadeIn('up', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
               <form className="form-container" onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label>Nombre y Apellido:</label>
+                  <label className="form-label fw-bold"l>Nombre y Apellido:</label>
                   <input type="text" name="name" className="form-control" value={formData.name} onChange={handleChange} required />
                 </div>
                 <div className="mb-3">
-                  <label>Correo:</label>
+                  <label className="form-label fw-bold">Correo:</label>
                   <input type="email" name="email" className="form-control" value={formData.email} onChange={handleChange} required />
                 </div>
                 <div className="mb-3">
-                  <label>Teléfono:</label>
+                  <label className="form-label fw-bold">Teléfono:</label>
                   <PhoneInput
                     country={'us'}
                     value={formData.phone}
@@ -193,7 +193,7 @@ const Appoinment = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label>País:</label>
+                  <label className="form-label fw-bold">País:</label>
                   <select name="country" className="form-control" value={formData.country} onChange={(e) => { handleChange(e); setSelectedCountry(e.target.value); }}>
                     <option value="">Seleccione un país</option>
                     {countries.map((country) => (
@@ -202,7 +202,7 @@ const Appoinment = () => {
                   </select>
                 </div>
                 <div className="mb-3">
-                  <label>Estado/Provincia:</label>
+                  <label className="form-label fw-bold">Estado/Provincia:</label>
                   <select name="state" className="form-control" value={formData.state} onChange={(e) => { handleChange(e); setSelectedState(e.target.value); }}>
                     <option value="">Seleccione un estado/provincia</option>
                     {states.map((state) => (
@@ -211,7 +211,7 @@ const Appoinment = () => {
                   </select>
                 </div>
                 <div className="mb-3">
-                  <label>Ciudad:</label>
+                  <label className="form-label fw-bold">Ciudad:</label>
                   <select name="city" className="form-control" value={formData.city} onChange={handleChange}>
                     <option value="">Seleccione una ciudad</option>
                     {cities.map((city) => (
@@ -220,11 +220,11 @@ const Appoinment = () => {
                   </select>
                 </div>
                 <div className="mb-3">
-                  <label>Idioma:</label>
+                  <label className="form-label fw-bold">Idioma:</label>
                   <input type="text" name="language" className="form-control" value={formData.language} onChange={handleChange} required />
                 </div>
                 <div className="mb-3">
-                  <label>Seleccione una cita:</label>
+                  <label className="form-label fw-bold">Seleccione una cita:</label>
                   <select name="appointmentType" className="form-control" value={formData.appointmentType} onChange={handleChange}>
                     <option value="">Seleccione una cita</option>
                     <option value="aprendizajes">Aprendizajes</option>
@@ -237,7 +237,7 @@ const Appoinment = () => {
                   </select>
                 </div>
                 <div className="mb-3">
-                  <label>Tipo de cita:</label>
+                  <label className="form-label fw-bold">Tipo de cita:</label>
                   <select name="appointmentMode" className="form-control" value={formData.appointmentMode} onChange={handleChange}>
                     <option value="">Seleccione el tipo de cita</option>
                     <option value="virtual">Virtual</option>
@@ -245,15 +245,15 @@ const Appoinment = () => {
                   </select>
                 </div>
                 <div className="mb-3">
-                  <label>Descripción:</label>
+                  <label className="form-label fw-bold">Descripción:</label>
                   <textarea name="description" className="form-control" value={formData.description} onChange={handleChange}></textarea>
                 </div>
                 <div className="mb-3">
-                  <label>Fecha:</label>
+                  <label className="form-label fw-bold">Fecha:</label>
                   <input type="date" name="date" className="form-control" value={formData.date} onChange={handleChange} required />
                 </div>
                 <div className="mb-3">
-                  <label>Hora:</label>
+                  <label className="form-label fw-bold">Hora:</label>
                   <select name="hour" className="form-control" value={formData.hour} onChange={handleChange}>
                     {Array.from({ length: 14 }, (_, i) => i + 8).map(hour => (
                       <option key={hour} value={hour}>{hour}</option>
@@ -261,7 +261,7 @@ const Appoinment = () => {
                   </select>
                 </div>
                 <div className="mb-3">
-                  <label>Minutos:</label>
+                  <label className="form-label fw-bold">Minutos:</label>
                   <select name="minutes" className="form-control" value={formData.minutes} onChange={handleChange}>
                     <option value="00">00</option>
                     <option value="15">15</option>
