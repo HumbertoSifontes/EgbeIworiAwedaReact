@@ -11,26 +11,41 @@ import FondoSuperior from '../images/ide.png'
 const Nosotros = () => {
   return (
     <>
-      <section className='section-padding'>
+      {/* Sección de nuestra historia */}
+      <section className='section-padding' aria-labelledby="nuestra-historia-titulo">
         <div className="container miniSectionServices">
           <div className="row">
             <div className="col-lg-4 col-md-12 col-12 img-sobre">
-              <motion.div variants={fadeIn('up', 0.2)} initial='hidden' animate='show' exit='hidden' className="about-img">
+              <motion.div 
+                variants={fadeIn('up', 0.2)} 
+                initial='hidden' 
+                animate='show' 
+                exit='hidden' 
+                className="about-img">
                 <img
                   src={nosotros}
                   alt={'Nosotros'}
                   id={"about-image"}
                   className={"img-fluid"}
+                  loading="lazy"
                 />
               </motion.div>
             </div>
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
-                <motion.div variants={fadeIn('down', 0.2)} initial='hidden' animate='show' exit='hidden'>
-                  <h2>Nuestra Historia</h2>
+                <motion.div 
+                  variants={fadeIn('down', 0.2)} 
+                  initial='hidden' 
+                  animate='show' 
+                  exit='hidden'>
+                  <h2 id="nuestra-historia-titulo">Nuestra Historia</h2>
                 </motion.div>
                 <br />
-                <motion.div variants={fadeIn('left', 0.2)} initial='hidden' animate='show' exit='hidden'>
+                <motion.div 
+                  variants={fadeIn('left', 0.2)} 
+                  initial='hidden' 
+                  animate='show' 
+                  exit='hidden'>
                   <p>
                     Nuestro camino comenzó hace décadas, cuando un grupo de apasionados seguidores 
                     de la religión Yoruba Tradicional se unieron con el deseo de explorar más allá 
@@ -51,29 +66,32 @@ const Nosotros = () => {
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
       <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
           </svg>
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
       <div className='div-largeimg2'>
       </div>
-    </div>
-    <div className='div-separador'>
+      </div>
+      <div className='div-separador'>
       <div className="custom-shape-divider-top-1716557548 separadorTop">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
         </svg>
       </div>
-    </div>
-      <section className='section-padding'>
+      </div>
+
+      {/* Sección de identidad y propósito */}
+      <section className='section-padding' aria-labelledby="nuestra-identidad-proposito-titulo">
         <div className="container miniSectionServices">
           <div className="row">
             <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-              <h2 className='text-center mb-5'>Nuestra Identidad y Propósito</h2>
+              <h2 className='text-center mb-5'id="nuestra-identidad-proposito-titulo">Nuestra Identidad y Propósito</h2>
             </motion.div>
             <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
               <p>
@@ -101,6 +119,7 @@ const Nosotros = () => {
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
       <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -119,7 +138,9 @@ const Nosotros = () => {
         </svg>
       </div>
     </div>
-      <section className='section-padding'>
+
+      {/* Sección de valores */}
+      <section className='section-padding' aria-labelledby="nuestros-valores-titulo">
         <div className='container miniSectionServices'>
           <div className="row">
             <div className="col-lg-4 col-md-12 col-12 img-sobre">
@@ -129,13 +150,14 @@ const Nosotros = () => {
                   alt={'Nosotros'}
                   id={"about-image"}
                   className={"img-fluid"}
+                  loading="lazy"
                 />
               </motion.div>
             </div>
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div variants={fadeIn('down', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h2>Nuestros Valores</h2>
+                  <h2 id="nuestro-valores-titulo">Nuestros Valores</h2>
                 </motion.div>
                   <br />
                 <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
@@ -152,6 +174,7 @@ const Nosotros = () => {
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
       <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -170,13 +193,15 @@ const Nosotros = () => {
         </svg>
       </div>
     </div>
-      <section className='section-padding'>
+
+      {/* Sección de video */}
+      <section className='section-padding' aria-labelledby="nuestro-video-titulo">
         <div className='container miniSectionServices'>
           <div className="row">
             <div className="col-lg-6 col-md-12 col-12 textoSobre">
               <div>
                 <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h2>Misión y Visión: Un Compromiso con la Sabiduría y la Unidad</h2>
+                  <h2 id="nuestra-mision-vision-titulo">Misión y Visión: Un Compromiso con la Sabiduría y la Unidad</h2>
                   <br />
                   <p className='text-left'>
                   En Egbe Iwory Aweda, estamos guiados por una misión y visión profundamente 
@@ -242,6 +267,7 @@ const Nosotros = () => {
                   alt={'Nosotros'}
                   id={"about-image"}
                   className={"img-fluid"}
+                  loading="lazy"
                   controls
                   autoPlay
                   loop
@@ -252,6 +278,7 @@ const Nosotros = () => {
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
       <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -270,6 +297,8 @@ const Nosotros = () => {
         </svg>
       </div>
     </div>
+
+      {/* Sección de llamada a la accion */}
       <section className='section-padding'>
         <div className='container miniSectionServices'>
           <div className="row gy-5 pb-5 pt-5" style={{ perspective: 360 }}>
@@ -294,6 +323,7 @@ const Nosotros = () => {
           </div>
         </div>
       </section>
+
     <motion.div className="fondoLateral4" variants={fadeIn('up', 0.2)} initial='hidden' animate='show' exit='hidden'>
       <img src={FondoDerecho} alt="tablero" />
     </motion.div>

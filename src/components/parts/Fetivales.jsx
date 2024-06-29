@@ -66,9 +66,9 @@ const Fetivales = () => {
 
     return (
       <div className="container">
-        <button className="btn btn-success text-white my-4" onClick={handleBackToYearsClick}>Volver</button>
+        <button className="btn btn-success text-white my-4" id='boton-volver-atras' onClick={handleBackToYearsClick}>Volver</button>
         <div className="mb-4">
-          <h2 className="text-center my-4">{selectedAlbum.name} - {selectedYear}</h2>
+          <h2 className="text-center my-4" id='titulo-album-orisa-año-seleccionado'>{selectedAlbum.name} - {selectedYear}</h2>
           <ImageGallery items={photos} />
         </div>
       </div>
@@ -78,16 +78,16 @@ const Fetivales = () => {
   if (selectedAlbum) {
     return (
       <div className="container">
-        <button className="btn btn-success text-white my-4" onClick={handleBackToAlbumsClick}>Volver</button>
+        <button className="btn btn-success text-white my-4" id='boton-volver-atras' onClick={handleBackToAlbumsClick}>Volver</button>
         <div className="mb-4">
-          <h2 className="text-center my-4">{selectedAlbum.name}</h2>
+          <h2 className="text-center my-4" id='titulo-album-orisa-seleccionado'>{selectedAlbum.name}</h2>
           <div className="row">
             {Object.keys(selectedAlbum.fotosPorAño).map(year => (
               <div key={year} className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div className="card cardAlbums intentoCard2" onClick={() => handleYearClick(year)}>
-                  <img className="card-img-top card-img-topAlbums" src={`https://humbertosifontes.github.io/JSON-Egbe/${selectedAlbum.fotosPorAño[year][0].ruta}`} alt={year} />
+                  <img className="card-img-top card-img-topAlbums" loading='lazy' src={`https://humbertosifontes.github.io/JSON-Egbe/${selectedAlbum.fotosPorAño[year][0].ruta}`} alt={year} />
                   <div className="card-body card-bodyAlbums">
-                    <h5 className="card-title">{year}</h5>
+                    <h5 className="card-title" id='titulo-año-album'>{year}</h5>
                   </div>
                 </div>
               </div>
@@ -103,10 +103,10 @@ const Fetivales = () => {
       <div className="row rowFestivales">
         <div>
           <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-            <h3 className='text-center mb-5'>Festivales</h3>
+            <h3 className='text-center mb-5' id='titulo-festivales'>Festivales</h3>
           </motion.div>
           <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-            <p className='text-left mb-5'>
+            <p className='text-left mb-5' id='contenido-festivales'>
               El Egbe Iwori Aweda, con un profundo respeto y devoción a las tradiciones 
               ancestrales, ha logrado consolidar una serie de festivales dedicados a los 
               Orisa Esu y Olokun, marcando hitos significativos en su trayectoria. Estos 
@@ -117,7 +117,7 @@ const Fetivales = () => {
             </p>
           </motion.div>
           <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-            <p>
+            <p id='contenido-primer-festival-Olokun'>
               <b>2014: </b>El Primer Festival de Olokun en Carúpano. En el año 2014, el Egbe 
               Iwori Aweda decidió rendir homenaje a Olokun, el Orisa del mar y de las profundidades 
               del océano, con un festival en la costa venezolana de Carúpano. Este evento marcó 
@@ -135,7 +135,7 @@ const Fetivales = () => {
             </p>
           </motion.div>
           <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-            <p>
+            <p id='contenido-primer-festival-Esu'>
               <b>2015: </b>El Festival de Baba Esu en Puerto Ordaz. El éxito del festival de Olokun 
               inspiró al Egbe a continuar con la organización de eventos similares. En 2015, se decidió 
               honrar a Baba Esu, el mensajero divino y guardián de los caminos, con un festival en 
@@ -149,7 +149,7 @@ const Fetivales = () => {
             </p>
           </motion.div>
           <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-            <p>
+            <p id='contenido-constantes-festivales'>
               A lo largo de los años, el Egbe Iwori Aweda ha demostrado un compromiso inquebrantable 
               con la preservación y promoción de sus tradiciones. Los festivales dedicados a Olokun y 
               Baba Esu no solo han sido eventos de devoción y celebración, sino también oportunidades 
@@ -165,37 +165,37 @@ const Fetivales = () => {
             </p>
           </motion.div>
           <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-            <p>
+            <p id='contenido-constantes-festivales'>
               Con cada festival, el Egbe reafirma su compromiso con la herencia cultural y espiritual 
               que los une, celebrando la vida, la fe y la comunidad en un hermoso ciclo de devoción y renovación.
             </p>
           </motion.div>
         </div>
         <motion.div variants={fadeIn('down', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-          <h3 className='text-center'>Albumes de Fotos</h3>
+          <h3 className='text-center' id='titulo-albumes'>Albumes de Fotos</h3>
         </motion.div>
         {albums.map(album => (
           <motion.div key={album.id} className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4" variants={fadeIn('up', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
             <div className="card cardAlbums intentoCard3" onClick={() => handleAlbumClick(album.id)}>
-              <img className="card-img-top card-img-topAlbums" src={`https://humbertosifontes.github.io/JSON-Egbe/${album.fotosPorAño[Object.keys(album.fotosPorAño)[1]][0].ruta}`} alt={album.name} />
+              <img className="card-img-top card-img-topAlbums" loading='lazy' src={`https://humbertosifontes.github.io/JSON-Egbe/${album.fotosPorAño[Object.keys(album.fotosPorAño)[1]][0].ruta}`} alt={album.name} />
               <div className="card-body card-bodyAlbums">
-                <h5 className="card-title"><b>{album.name}</b></h5>
+                <h5 className="card-title" id='titulo-album'><b>{album.name}</b></h5>
               </div>
             </div>
           </motion.div>
         ))}
         <div className='mt-5'>
           <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-            <h3>Proximamente</h3>
+            <h3 id='titulo-proximamente'>Proximamente</h3>
           </motion.div>
           <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden' viewport={{ once: true }} layoutScroll>
-            <p className='text-left'>
+            <p className='text-left' id='contenido-proximamente'>
               En 2024, el Egbe Iwori Aweda continúa su rica tradición de honrar 
               a los Orisa con la organización de festivales dedicados a Orisa Aje y Ogun. 
               Estos eventos representan no solo una celebración de la espiritualidad 
               Yoruba, sino también una reafirmación del compromiso del Egbe con sus 
               creencias y prácticas ancestrales.
-              </p>
+            </p>
             </motion.div>
             <div className="container miniSectionServices">
               <div className="row">
@@ -206,16 +206,17 @@ const Fetivales = () => {
                       alt={'Orisa Aje'}
                       id={"about-image"}
                       className={"img-fluid"}
+                      loading='lazy'
                     />
                   </motion.div>
                 </div>
                 <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
                   <div className="about-text">
                     <motion.div variants={fadeIn('up', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                      <h3>El Festival de Orisa Aje</h3>
+                      <h3 id='titulo-festival-orisa-aje'>El Festival de Orisa Aje</h3>
                     </motion.div>
                     <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                      <p>
+                      <p id='contenido-festival-orisa-aje'>
                         Este año, el Egbe ha decidido rendir homenaje a Orisa Aje, la deidad de la 
                         riqueza y la prosperidad. Reconociendo la importancia de la abundancia 
                         material y espiritual, el festival de Aje será un evento donde se celebrará 
@@ -238,10 +239,10 @@ const Fetivales = () => {
                 <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
                   <div className="about-text">
                     <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                      <h3>El Festival de Ogun</h3>
+                      <h3 id='titulo-festival-ogun'>El Festival de Ogun</h3>
                     </motion.div>
                     <motion.div variants={fadeIn('right', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                      <p>
+                      <p id='contenido-festival-ogun'>
                         Además, el Egbe ha decidido celebrar a Ogun, el Orisa del hierro y la guerra, 
                         conocido por su valentía, fuerza y laboriosidad. Este festival se llevará a cabo 
                         en un entorno que resalte el poder y la energía de Ogun, subrayando la importancia 
@@ -263,13 +264,14 @@ const Fetivales = () => {
                       alt={'Ogun'}
                       id={"about-image"}
                       className={"img-fluid"}
+                      loading='lazy'
                     />
                   </motion.div>
                 </div>
               </div>
             </div>
             <motion.div variants={fadeIn('up', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-              <p>
+              <p id='contenido-compromiso-festivales'>
                 La organización de estos festivales es un testimonio del compromiso continuo del Egbe Iwori Aweda 
                 con la celebración y preservación de sus tradiciones. A través de estos eventos, el Egbe no 
                 solo honra a los Orisa, sino que también fortalece los lazos comunitarios y fomenta un profundo 
@@ -281,7 +283,7 @@ const Fetivales = () => {
               </p>
             </motion.div>
             <motion.div variants={fadeIn('up', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-              <p>
+              <p id='contenido-compromiso-festivales'>
                 Con cada año que pasa, el Egbe de Ifá Yoruba continúa su viaje de devoción y renovación, celebrando 
                 la riqueza de la espiritualidad Yoruba y su impacto positivo en la vida de todos los que forman 
                 parte de esta tradición sagrada. Los festivales de este año prometen ser un testimonio vibrante de 

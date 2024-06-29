@@ -3,36 +3,40 @@ import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 import instagram from '../images/instagram.png';
 
+// Componente de pie de página del sitio web
 const Footer = () => {
   return (
-    <section className="section-padding footer" id="footer">
+    <footer className="section-padding footer" id="footer" aria-labelledby="footer-heading">
       <div className="container">
         <div className="row">
+          {/* Sección de redes sociales */}
           <div className="col-6 col-md-6 col-lg-4 redes">
             <div>
-              <h3 className='footerTitles'>Redes Sociales</h3>
+              <h3 className='footerTitles' id="footer-heading">Redes Sociales</h3>
             </div>
             <div className="row sociales">
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                <img src={facebook} alt="facebook" id="facebook" />
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src={facebook} alt="Facebook" id="facebook" loading="lazy" />
               </a>
             </div>
             <div className="row sociales">
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                <img src={instagram} alt="instagram" id="instagram" />
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src={instagram} alt="Instagram" id="instagram" loading="lazy" />
               </a>
             </div>
             <div className="row sociales">
-              <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
-                <img src={twitter} alt="twitter" id="twitter" />
+              <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <img src={twitter} alt="Twitter" id="twitter" loading="lazy" />
               </a>
             </div>
           </div>
+          
+          {/* Sección de ubicación */}
           <div className="col-6 col-md-6 col-lg-4 mapa">
             <div>
-              <h3 className='footerTitles'>Ubicacion</h3>
+              <h3 className='footerTitles'>Ubicación</h3>
             </div>
-            <div className="mapouter">
+            <div className="mapouter" aria-labelledby="ubicacion-heading">
               <div className="gmap_canvas">
                 <iframe
                   className="container-fluid"
@@ -44,29 +48,26 @@ const Footer = () => {
                   scrolling="no"
                   marginHeight="0"
                   marginWidth="0"
-                  title="mapa de ubicación">
+                  title="Mapa de ubicación">
                 </iframe>
-                <a href="https://online-timer.me/">Online Timer</a>
-                <br />
-                <a href="https://timenowin.net/">Time Now</a>
-                <br />
-                <a href="https://www.embedmaps.co">embed google maps api</a>
               </div>
             </div>
           </div>
+          
+          {/* Sección de contacto */}
           <div className="col-12 col-md-12 col-lg-4">
             <div>
               <h3 className='footerTitles'>Contacto</h3>
             </div>
             <div className="noPadding">
               <p><b>Email</b>: egbeiworiaweda@gmail.com</p>
-              <p><b>Telefono</b>: 2483456</p>
+              <p><b>Teléfono</b>: 2483456</p>
               <p><b>Whatsapp</b>: 1109876543</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 

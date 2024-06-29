@@ -14,33 +14,35 @@ import { fadeIn } from '../../animations/variants'
 const Logros = () => {
   return (
     <>
-    <section className='section-padding'>
+    {/* Presentacion de Logros del Egbe */}
+    <section className='section-padding' aria-labelledby='titulo-presentacion-logros'>
       <div className='container miniSectionServices mt-5 pt-5'>
         <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-          <h2 className='text-center mb-5'>Logros del Egbe Iwori Aweda</h2>
+          <h2 className='text-center mb-5' id='titulo-presentacion-logros'>Logros del Egbe Iwori Aweda</h2>
         </motion.div>
         <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-        <p className='text-left'>
-          El Egbe Iwori Aweda ha demostrado un compromiso profundo con la preservación 
-          y promoción de las tradiciones de Ifá y Orisa. La creación de su propio templo, 
-          la realización de ceremonias regulares y significativas, la organización de 
-          festivales y la expansión internacional son logros que reflejan el espíritu 
-          de iwa pele y la unidad de la comunidad. Estos logros no solo han fortalecido 
-          a los integrantes del Egbe, sino que también han enriquecido vidas y creado 
-          puentes de entendimiento y respeto en todo el mundo. Con cada ceremonia y 
-          celebración, el Egbe Iwori Aweda reafirma su dedicación a las enseñanzas ancestrales, 
-          creando un legado de devoción y crecimiento espiritual que perdurará por generaciones. <br /><br />
-          El Egbe Iwori Aweda se ha destacado por su compromiso inquebrantable con las 
-          tradiciones de Ifá y Orisa, alcanzando numerosos logros que reflejan la devoción, 
-          la generosidad y el espíritu comunitario de sus integrantes. Desde la creación de 
-          su propio templo hasta la realización de diversas ceremonias y festivales, el Egbe 
-          ha demostrado ser un pilar fundamental en la preservación y promoción de la 
-          espiritualidad Yoruba. A continuación, se presentan los logros más significativos 
-          que han marcado la trayectoria del Egbe Iwori Aweda.
-        </p>
+          <p className='text-left' id='contenido-presentacion-logros'>
+            El Egbe Iwori Aweda ha demostrado un compromiso profundo con la preservación 
+            y promoción de las tradiciones de Ifá y Orisa. La creación de su propio templo, 
+            la realización de ceremonias regulares y significativas, la organización de 
+            festivales y la expansión internacional son logros que reflejan el espíritu 
+            de iwa pele y la unidad de la comunidad. Estos logros no solo han fortalecido 
+            a los integrantes del Egbe, sino que también han enriquecido vidas y creado 
+            puentes de entendimiento y respeto en todo el mundo. Con cada ceremonia y 
+            celebración, el Egbe Iwori Aweda reafirma su dedicación a las enseñanzas ancestrales, 
+            creando un legado de devoción y crecimiento espiritual que perdurará por generaciones. <br /><br />
+            El Egbe Iwori Aweda se ha destacado por su compromiso inquebrantable con las 
+            tradiciones de Ifá y Orisa, alcanzando numerosos logros que reflejan la devoción, 
+            la generosidad y el espíritu comunitario de sus integrantes. Desde la creación de 
+            su propio templo hasta la realización de diversas ceremonias y festivales, el Egbe 
+            ha demostrado ser un pilar fundamental en la preservación y promoción de la 
+            espiritualidad Yoruba. A continuación, se presentan los logros más significativos 
+            que han marcado la trayectoria del Egbe Iwori Aweda.
+          </p>
         </motion.div>
       </div>
     </section>
+
       <div className='div-separador'>
         <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -48,60 +50,65 @@ const Logros = () => {
           </svg>
         </div>
       </div>
-    <div className="div-largeimgAvance">
-        <div className="container section-header pb-5">
-          <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-            <h3 className=' text-center titlez'>La Creación de Nuestro Propio Templo</h3>
-          </motion.div>
-          <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-            <p className='text-left textz'>
-              El Egbe Iwori Aweda ha recorrido un camino de crecimiento y transformación, reflejando 
-              el compromiso y la dedicación de sus integrantes hacia la práctica de Ifá y Orisa. Uno 
-              de los logros más significativos ha sido la creación de su propio templo, un espacio 
-              sagrado que ha evolucionado desde humildes comienzos hasta convertirse en el corazón 
-              de todas las actividades espirituales del Egbe. <br /> <br />
-            </p>
-          </motion.div>
-          <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-            <p className='text-left textz'>
-              <strong>Los Primeros Pasos en Puerto Ordaz</strong><br /> En los inicios del Egbe, las ceremonias 
-              y rituales se llevaban a cabo en un apartamento del Oluwo en Puerto Ordaz. Este espacio, 
-              aunque limitado, se llenaba de energía y devoción gracias al espíritu de unidad y compromiso 
-              de sus miembros. Fue en este ambiente que se cimentaron las bases de la comunidad, con cada 
-              ceremonia reforzando los lazos entre los integrantes y fortaleciendo su fe en las enseñanzas de Ifá.<br /><br />
-            </p>
-          </motion.div>
-          <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-            <p className='text-left textz'>
-              <strong>La Finca en Puerto Ordaz: Un Paso Adelante</strong><br /> Reconociendo la necesidad de un 
-              espacio más adecuado para las crecientes actividades del Egbe, uno de los integrantes del 
-              concilio ofreció generosamente una finca en la misma localidad de Puerto Ordaz. Esta finca 
-              se convirtió en el templo provisional del Egbe, un lugar donde se podían realizar festivales, 
-              rituales, consagraciones y ebo con mayor libertad y amplitud.<br /><br />
-            </p>
-          </motion.div>
-          <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-            <p className='text-left textz'>
-              <strong>El Traslado a Puerto Píritu</strong><br /> Con el tiempo, las necesidades del Egbe 
-              continuaron creciendo, y surgió la oportunidad de trasladarse a Puerto Píritu. Otro integrante 
-              del Egbe ofreció una quinta con el espacio suficiente para convertirse en el nuevo templo. 
-              Este cambio permitió al Egbe expandir sus actividades y continuar celebrando sus festivales 
-              y rituales en un entorno más amplio y adecuado.<br /><br />
-            </p>
-          </motion.div>
-          <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-            <p className='text-left textz'>
-              <strong>La Adquisición de Nuestro Propio Templo</strong><br /> Finalmente, en un esfuerzo conjunto 
-              que involucró la dedicación y los recursos de varios integrantes del Egbe, se logró la 
-              adquisición de un espacio propio en Puerto Píritu. Este logro es un testimonio del compromiso 
-              y la colaboración de la comunidad, reflejando los valores de iwa pele que guían cada acción del Egbe.
-              Hoy en día, el templo del Egbe Iwori Aweda es un lugar de paz y espiritualidad, donde se realizan 
-              todas las ceremonias, rituales, consagraciones y ebo. Este espacio sagrado es el resultado de años 
-              de esfuerzo colectivo y dedicación, simbolizando la unidad y la fortaleza de la comunidad.<br />
-            </p>
-          </motion.div>
-        </div>
-    </div>
+
+    {/* Avance del Templo */}
+    <section aria-labelledby='Avance-templo'>
+      <div className="div-largeimgAvance">
+          <div className="container section-header pb-5">
+            <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+              <h3 className=' text-center titlez' id='titulo-creacion-templo'>La Creación de Nuestro Propio Templo</h3>
+            </motion.div>
+            <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+              <p id='contenido-creacion-templo' className='text-left textz'>
+                El Egbe Iwori Aweda ha recorrido un camino de crecimiento y transformación, reflejando 
+                el compromiso y la dedicación de sus integrantes hacia la práctica de Ifá y Orisa. Uno 
+                de los logros más significativos ha sido la creación de su propio templo, un espacio 
+                sagrado que ha evolucionado desde humildes comienzos hasta convertirse en el corazón 
+                de todas las actividades espirituales del Egbe. <br /> <br />
+              </p>
+            </motion.div>
+            <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+              <p className='text-left textz' id='contenido-primer-templo-departamento-oluwo-puerto-ordaz'>
+                <strong>Los Primeros Pasos en Puerto Ordaz</strong><br /> En los inicios del Egbe, las ceremonias 
+                y rituales se llevaban a cabo en un departamento del Oluwo en Puerto Ordaz. Este espacio, 
+                aunque limitado, se llenaba de energía y devoción gracias al espíritu de unidad y compromiso 
+                de sus miembros. Fue en este ambiente que se cimentaron las bases de la comunidad, con cada 
+                ceremonia reforzando los lazos entre los integrantes y fortaleciendo su fe en las enseñanzas de Ifá.<br /><br />
+              </p>
+            </motion.div>
+            <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+              <p className='text-left textz' id='contenido-segundo-templo-finca-puerto-ordaz'>
+                <strong>La Finca en Puerto Ordaz: Un Paso Adelante</strong><br /> Reconociendo la necesidad de un 
+                espacio más adecuado para las crecientes actividades del Egbe, uno de los integrantes del 
+                concilio ofreció generosamente una finca en la misma localidad de Puerto Ordaz. Esta finca 
+                se convirtió en el templo provisional del Egbe, un lugar donde se podían realizar festivales, 
+                rituales, consagraciones y ebo con mayor libertad y amplitud.<br /><br />
+              </p>
+            </motion.div>
+            <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+              <p className='text-left textz' id='contenido-tercer-templo-puerto-piritu'>
+                <strong>El Traslado a Puerto Píritu</strong><br /> Con el tiempo, las necesidades del Egbe 
+                continuaron creciendo, y surgió la oportunidad de trasladarse a Puerto Píritu. Otro integrante 
+                del Egbe ofreció una quinta con el espacio suficiente para convertirse en el nuevo templo. 
+                Este cambio permitió al Egbe expandir sus actividades y continuar celebrando sus festivales 
+                y rituales en un entorno más amplio y adecuado.<br /><br />
+              </p>
+            </motion.div>
+            <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
+              <p className='text-left textz' id='contenido-adquisicion-templo-puerto-piritu'>
+                <strong>La Adquisición de Nuestro Propio Templo</strong><br /> Finalmente, en un esfuerzo conjunto 
+                que involucró la dedicación y los recursos de varios integrantes del Egbe, se logró la 
+                adquisición de un espacio propio en Puerto Píritu. Este logro es un testimonio del compromiso 
+                y la colaboración de la comunidad, reflejando los valores de iwa pele que guían cada acción del Egbe.
+                Hoy en día, el templo del Egbe Iwori Aweda es un lugar de paz y espiritualidad, donde se realizan 
+                todas las ceremonias, rituales, consagraciones y ebo. Este espacio sagrado es el resultado de años 
+                de esfuerzo colectivo y dedicación, simbolizando la unidad y la fortaleza de la comunidad.<br />
+              </p>
+            </motion.div>
+          </div>
+      </div>
+    </section>
+
       <div className='div-separador'>
         <div className="custom-shape-divider-top-1716557548 separadorTop">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -109,7 +116,9 @@ const Logros = () => {
           </svg>
         </div>
       </div>
-    <section className='section-padding'>
+
+    {/* Ose Ita d'ogun */}
+    <section className='section-padding' aria-labelledby='avance-segun-ceremonias'>
       <div className="container miniSectionServices">
         <div className="row">
           <div className="col-lg-4 col-md-12 col-12 img-sobre pt-5">
@@ -119,16 +128,17 @@ const Logros = () => {
                 alt={"Ose Ita D'Ogun"}
                 id={"about-image"}
                 className={"img-fluid"}
+                loading='lazy'
               />
             </motion.div>
           </div>
           <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre pt-5">
             <div className="about-text">
               <motion.div className="about-img" variants={fadeIn('down', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                <h3>Ceremonias de Ose Ita d'ogun</h3>
+                <h3 id='titulo-ceremonia-ose-ita-dogun'>Ceremonias de Ose Ita d'ogun</h3>
               </motion.div>
               <motion.div className="about-img" variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                <p>
+                <p id='contenido-ceremonia-ose-ita-dogun'>
                 Uno de los hitos más destacados del Egbe Iwori Aweda ha sido la realización 
                 ininterrumpida de las ceremonias de Ose Itadogun desde el 18 de abril de 2015. 
                 Estas ceremonias, que se celebran cada 17 días, son rituales dedicados a la 
@@ -143,22 +153,24 @@ const Logros = () => {
         </div>
       </div>
     </section>
-    <section className='section-padding'>
+
+    {/* Itelodu */}
+    <section className='section-padding' aria-labelledby='avance-segun-ceremonias'>
         <div className="container">
           <div className="row">
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div className="about-img" variants={fadeIn('left', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h3>Ceremonias de Consagración de Itelodu</h3>
+                  <h3 id='titulo-ceremonia-itelodu'>Ceremonias de Consagración de Itelodu</h3>
                 </motion.div>
                 <motion.div className="about-img" variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p>
-                  El Egbe Iwori Aweda también se ha distinguido por llevar a cabo ceremonias 
-                  de consagración de Itelodu, un ritual sagrado donde se consagran Babalawo e 
-                  Iyanifa. Estas ceremonias, fundamentales en la tradición Yoruba, son momentos 
-                  de profunda transformación y dedicación para quienes son iniciados. A través 
-                  de estos rituales, el Egbe ha formado a numerosos Babalawo e Iyanifa, fortaleciendo 
-                  la sabiduría y la práctica espiritual dentro de la comunidad.
+                  <p id='contenido-ceremonia-itelodu'>
+                    El Egbe Iwori Aweda también se ha distinguido por llevar a cabo ceremonias 
+                    de consagración de Itelodu, un ritual sagrado donde se consagran Babalawo e 
+                    Iyanifa. Estas ceremonias, fundamentales en la tradición Yoruba, son momentos 
+                    de profunda transformación y dedicación para quienes son iniciados. A través 
+                    de estos rituales, el Egbe ha formado a numerosos Babalawo e Iyanifa, fortaleciendo 
+                    la sabiduría y la práctica espiritual dentro de la comunidad.
                   </p>
                 </motion.div>
               </div>
@@ -170,13 +182,16 @@ const Logros = () => {
                 alt={"Itelodu"}
                 id={"about-image"}
                 className={"img-fluid"}
+                loading='lazy'
               />
             </motion.div>
             </div>
           </div>
         </div>
     </section>
-    <section className='section-padding'>
+
+    {/* Isefa */}
+    <section className='section-padding' aria-labelledby='avance-segun-ceremonias'>
         <div className="container miniSectionServices">
           <div className="row">
             <div className="col-lg-4 col-md-12 col-12 img-sobre">
@@ -186,21 +201,22 @@ const Logros = () => {
                 alt={"Orisa"}
                 id={"about-image"}
                 className={"img-fluid"}
+                loading='lazy'
               />
             </motion.div>
             </div>
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div className="about-img" variants={fadeIn('up', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h3>Consagraciones de Isefa</h3>
+                  <h3 id='titulo-ceremonia-isefa'>Consagraciones de Isefa</h3>
                 </motion.div>
                 <motion.div className="about-img" variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p>
-                  Otro logro significativo ha sido la realización de múltiples consagraciones 
-                  de Isefa. Estas ceremonias son esenciales para quienes inician su camino 
-                  en la práctica de Ifá, marcando el comienzo de su relación formal con los 
-                  Orisa y el sistema de Ifá. El Egbe Iwori Aweda ha guiado a muchos aspirantes 
-                  en este proceso, asegurando una base sólida para su desarrollo espiritual y personal.
+                  <p id='titulo-ceremonia-isefa'>
+                    Otro logro significativo ha sido la realización de múltiples consagraciones 
+                    de Isefa. Estas ceremonias son esenciales para quienes inician su camino 
+                    en la práctica de Ifá, marcando el comienzo de su relación formal con los 
+                    Orisa y el sistema de Ifá. El Egbe Iwori Aweda ha guiado a muchos aspirantes 
+                    en este proceso, asegurando una base sólida para su desarrollo espiritual y personal.
                   </p>
                 </motion.div>
               </div>
@@ -208,16 +224,18 @@ const Logros = () => {
           </div>
         </div>
     </section>
-    <section className='section-padding'>
+
+    {/* Viajes a Africa */}
+    <section className='section-padding' aria-labelledby='avance-segun-consagraciones'>
         <div className="container">
           <div className="row">
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div className="about-img" variants={fadeIn('right', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h3>Viajes a África</h3>
+                  <h3 id='titulo-viajes-africa'>Viajes a África</h3>
                 </motion.div>
                 <motion.div className="about-img" variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p>
+                  <p id='contenido-viajes-africa'>
                     El Egbe Iwori Aweda ha llevado a cabo tres viajes a África, un continente
                     que es el corazón de las tradiciones Yoruba. Durante estos viajes, diversos 
                     integrantes del Egbe han sido consagrados a diferentes Orisa, profundizando 
@@ -236,13 +254,16 @@ const Logros = () => {
                 alt={"Africa"}
                 id={"about-image"}
                 className={"img-fluid"}
+                loading='lazy'
               />
             </motion.div>
             </div>
           </div>
         </div>
     </section>
-    <section className='section-padding'>
+
+    {/* Ogboni */}
+    <section className='section-padding' aria-labelledby='avance-segun-consagraciones'>
         <div className="container miniSectionServices">
           <div className="row">
             <div className="col-lg-4 col-md-12 col-12 img-sobre">
@@ -252,16 +273,17 @@ const Logros = () => {
                 alt={"Ogboni"}
                 id={"about-image"}
                 className={"img-fluid"}
+                loading='lazy'
               />
             </motion.div>
             </div>
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div className="about-img" variants={fadeIn('left', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h3>Consagraciones de Ogboni</h3>
+                  <h3 id='titulo-consagracion-ogboni'>Consagraciones de Ogboni</h3>
                 </motion.div>
                 <motion.div className="about-img" variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p>
+                  <p id='titulo-consagracion-ogboni'>
                     En el marco de estos viajes a África, varios integrantes del Egbe han 
                     tenido el honor de ser consagrados en la sociedad de Ogboni. Esta sociedad 
                     es una organización religiosa y política dentro de la cultura Yoruba, 
@@ -275,6 +297,8 @@ const Logros = () => {
           </div>
         </div>
     </section>
+
+
       <div className='div-separador'>
         <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -287,13 +311,16 @@ const Logros = () => {
           </svg>
         </div>
       </div>
-    <section className='section-padding'>
+
+    {/* Albumes de Festivales */}
+    <section className='section-padding' aria-labelledby='albumes-festivales'>
         <div className="container miniSectionServices">
           
           <Fetivales />
           
         </div>
     </section>
+
       <div className='div-separador'>
         <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -301,14 +328,16 @@ const Logros = () => {
           </svg>
         </div>
       </div>
-    <section className='div-largeimgAvance2'>
+
+
+    <section className='div-largeimgAvance2' aria-labelledby='otras-menciones'>
       <div className="container section-header pb-5">
         <div className="row">
         <motion.div className="about-img" variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-          <h3 className='text-left mt-5 titlez'>Otras menciones</h3>
+          <h3 className='text-left mt-5 titlez' id='titulo-otras-menciones'>Otras menciones</h3>
         </motion.div>
         <motion.div className="about-img" variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-          <p className='textz'>
+          <p className='textz' id='contenido-otras-menciones'>
             Tambien cabe mencionar que el Egbe Iwori Aweda ha extendido su influencia más allá de Venezuela, realizando 
             consagraciones en países como Colombia y Estados Unidos. Esta expansión internacional 
             ha permitido que las enseñanzas de Ifá y Orisa alcancen a una audiencia más amplia, 
@@ -320,6 +349,8 @@ const Logros = () => {
         </div>
       </div>
     </section>
+
+
       <div className='div-separador'>
         <div className="custom-shape-divider-top-1716557548 separadorTop">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -327,11 +358,13 @@ const Logros = () => {
           </svg>
         </div>
       </div>
-    <section className='section-padding'>
+
+
+    <section className='section-padding' aria-labelledby='invitacion'>
       <div className='container miniSectionServices'>
         <div className="row gy-5 pb-5 pt-5" style={{ perspective: 360 }}>
           <motion.div variants={fadeIn('backward', 0.2)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
-            <p className="text-center">
+            <p className="text-center" id='contenido-invitacion'>
               En Egbe Iwory Aweda, creemos que cada paso en esta senda sagrada nos acerca más a la comprensión 
               de nuestro propósito y destino. <br />
               Creemos que todos tenemos el poder de conectarnos con la divinidad. A través de la fe, podemos 
@@ -344,16 +377,17 @@ const Logros = () => {
         </div>
         <div className="row gy-5" style={{ perspective: 360 }}>
             <motion.div variants={fadeIn('backward', 0.4)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
-              <Link className='ctaText' to="/contact"><h1 className='pb-5 ctaText text-center'>¡Agenda una Cita Hoy Mismo!</h1></Link>
+              <Link className='ctaText' to="/contact"><h1 className='pb-5 ctaText text-center' id='titulo-invitacion'>¡Agenda una Cita Hoy Mismo!</h1></Link>
             </motion.div>
           </div >
           <div className="row gy-5" style={{ perspective: 360 }}>
             <motion.div variants={fadeIn('backward', 0.6)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
-              <Link to="/contact" className="btn btn-success d-grid gap-2 col-6 mx-auto text-white cta">Contactanos</Link>
+              <Link to="/contact" className="btn btn-success d-grid gap-2 col-6 mx-auto text-white cta" id='boton-invitacion'>Contactanos</Link>
             </motion.div>
           </div>
       </div>
     </section>
+
     <motion.div className="fondoLateral2" variants={fadeIn('down', 0.2)} initial='hidden' animate='show' exit='hidden'>
         <img src={FondoIzquierdo} alt="ikin" />
     </motion.div>

@@ -51,7 +51,7 @@
     --transMobileTop: url('/src/components/images/fondoFinalMobileTopDark.png');
     --transWideBottom: url('/src/components/images/FondoTopFinalDark.png');
     --transMobileBottom: url('/src/components/images/fondoFinalMobileBottomDark.png');
-  }
+}
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -141,7 +141,6 @@ p{
     width: calc(159% + 1.3px);
     height: 99px;
 }
-
 .custom-shape-divider-top-1716557548 .shape-fill {
     fill: var(--marronT);
 }
@@ -154,14 +153,12 @@ p{
     line-height: 0;
     transform: rotate(180deg);
 }
-
 .custom-shape-divider-bottom-1716559100 svg {
     position: relative;
     display: block;
     width: calc(159% + 1.3px);
     height: 99px;
 }
-
 .custom-shape-divider-bottom-1716559100 .shape-fill {
     fill: var(--marronT);
 }
@@ -218,7 +215,6 @@ p{
     cursor: pointer;
     animation: arrow .5s ease-in-out infinite alternate;
 }
-
 @keyframes arrow {
     100% {
         transform: translateY(30px) rotate(45deg); 
@@ -364,7 +360,6 @@ p{
     line-height: 1.9;
     color: white;
 }
-
 .carousel-inner::before{
     content: '';
     position: absolute;
@@ -511,7 +506,6 @@ i {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
 }
-  
 .grid-item {
     position: relative;
     overflow: hidden;
@@ -679,18 +673,16 @@ i {
     height: auto; 
     max-height: 90%;
     overflow: auto; 
-  }
-  
-  .Overlay {
+}
+.Overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: var(--negroT);
-  }
-  
-  .close-button {
+}
+.close-button {
     background: rgb(240, 65, 65);
     border: none;
     border-radius: 10%;
@@ -702,10 +694,10 @@ i {
     color: var(--blanco);
     padding: 0 2%;
     max-width: 50px;
-  }
-  .modal-body{
+}
+.modal-body{
     margin-top: 50px;
-  }
+}
 
 /*Login*/
 
@@ -719,7 +711,6 @@ i {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border-radius: 5px;
 }
-
 .section-header {
     margin-bottom: 1.25rem;
 }
@@ -746,9 +737,8 @@ i {
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border-radius: 5px;
-  }
-  
-  @media (max-width: 1200px) {
+}
+ @media (max-width: 1200px) {
     .form-container {
       max-width: 60%;
     }
@@ -759,8 +749,7 @@ i {
         max-width: 60%;
         min-width: 900px;
     }
-  }
-  
+}
   @media (max-width: 992px) {
     .form-container {
       max-width: 74%;
@@ -772,9 +761,8 @@ i {
         min-width: 700px;
         max-width: 60%;
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
     .form-container {
       max-width: 87%;
     }
@@ -785,9 +773,8 @@ i {
         max-width: 80%;
         min-width: 520px;
     }
-  }
-  
-  @media (max-width: 576px) {
+}
+@media (max-width: 576px) {
     .form-container,
     .containerForm{
       max-width: 100%;
@@ -796,11 +783,10 @@ i {
         min-width: 320px;
         max-width: 90%;
     }
-  }
-  
-  .mb-3 {
+}
+.mb-3 {
     margin-bottom: 1rem;
-  }
+}
   
 
 /*Footer*/
@@ -895,9 +881,8 @@ i {
 .dark_mode {
     margin-top: -20px;
     margin-left: 10px;
-  }
-  
-  .dark_mode_label {
+}
+.dark_mode_label {
     width: 65px;
     height: 30px;
     position: relative;
@@ -908,8 +893,8 @@ i {
         inset 0px -5px 15px rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: 0.3s;
-  }
-  .dark_mode_label:after {
+}
+.dark_mode_label:after {
     content: "";
     width: 25px;
     height: 25px;
@@ -920,46 +905,45 @@ i {
     border-radius: 180px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-  }
-  .dark_mode_input {
+}
+.dark_mode_input {
     width: 0;
     height: 0;
     visibility: hidden;
-  }
-  .dark_mode_input:checked + .dark_mode_label {
+}
+.dark_mode_input:checked + .dark_mode_label {
     background: #242424;
-  }
-  .dark_mode_input:checked + .dark_mode_label:after {
+}
+.dark_mode_input:checked + .dark_mode_label:after {
     left: 62px;
     transform: translateX(-100%);
     background: linear-gradient(180deg, #777, #3a3a3a);
-  }
-  .dark_mode_label:active:after {
+}
+.dark_mode_label:active:after {
     width: 30px;
-  }
-  
-  .dark_mode_label img {
+}
+.dark_mode_label img {
     position: absolute;
     width: 20px;
     top: 5px;
     z-index: 100;
-  }
-  .sun {
+}
+.sun {
     left: 5px;
     fill: #fff;
     transition: 0.3s;
-  }
-  .moon {
+}
+.moon {
     left: 40px;
     fill: #7e7e7e;
     transition: 0.3s;
-  }
-  .dark_mode_input:checked + .sun {
+}
+.dark_mode_input:checked + .sun {
     fill: #7e7e7e;
-  }
-  .dark_mode_input:checked + .moon {
+}
+.dark_mode_input:checked + .moon {
     fill: #fff;
-  }
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.carousel-caption {

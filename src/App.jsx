@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <Router>
-        <ScrollToTop />
-        <AppContent />
+        <ScrollToTop /> {/* Componente para desplazar hacia arriba al cambiar de ruta */}
+        <AppContent /> {/* Contenido principal de la aplicación, se hizo asi porque no permitia usar useLocation fuera del contexto del Router */}
       </Router>
     </div>
   );

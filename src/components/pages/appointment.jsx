@@ -175,7 +175,7 @@ const Appoinment = () => {
             <motion.div className="col-md-12 p-0 pt-4 pb-4" variants={fadeIn('up', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
               <form className="form-container" onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label className="form-label fw-bold"l>Nombre y Apellido:</label>
+                  <label className="form-label fw-bold">Nombre y Apellido:</label>
                   <input type="text" name="name" className="form-control" value={formData.name} onChange={handleChange} required />
                 </div>
                 <div className="mb-3">

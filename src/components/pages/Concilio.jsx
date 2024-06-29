@@ -378,16 +378,17 @@ const Concile = () => {
 
   return (
     <>
-      <section className="concilio section-padding" id="concilio">
+      {/* seccion de presentacion de concilio */}
+      <section className="concilio section-padding" id="concilio" aria-labelledby='concilio-presentacion'>
         <div className="container miniSectionServices">
           <div className="row">
             <div className="col-md-12">
               <div className="section-header  pb-5">
                 <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h2 className='text-center pb-5'>Concilio Ifa</h2>
+                  <h2 className='text-center pb-5' id='titulo-concilio'>Concilio Ifa</h2>
                 </motion.div>
                 <motion.div variants={fadeIn('left', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p className='text-left'>
+                  <p className='text-left' id='contenido-concilio'>
                     El concilio de un Ilé en la religión yoruba, se compone de una estructura jerárquica que incluye 16 roles clave, 
                     cada uno con responsabilidades específicas que aseguran el funcionamiento armonioso y 
                     la preservación de las tradiciones espirituales y culturales del grupo. Este concilio 
@@ -416,13 +417,13 @@ const Concile = () => {
               <motion.div key={index} className="col-12 col-md-6 col-lg-3 cardHover" variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
                 <div className="card text-left cardShadow intentoCard3" onClick={() => openModal(character)}>
                   <div className="card-body">
-                    <img alt={character.name} className="img-fluid rounded-circle" src={character.image} />
-                    <h3 className="card-title py-2">{character.name}</h3>
-                    <span className="yellow">{character.title}</span>
+                    <img alt={character.name} className="img-fluid rounded-circle" loading='lazy' src={character.image} />
+                    <h3 className="card-title py-2" id='titulo-mayor-concilio'>{character.name}</h3>
+                    <span className="yellow" id='pin-cargo-concilio'>{character.title}</span>
                     {character.highlightTitle && character.highlightedTitleContent && (
-                      <span className="red"> {character.highlightedTitleContent}</span>
+                      <span className="red" id='pin-puesto-ogboni'> {character.highlightedTitleContent}</span>
                     )}
-                    <p className="card-text">{character.description}</p>
+                    <p className="card-text" id='contenido-descripcion-babalawo'>{character.description}</p>
                     <p className="socials text-center">
                       <i className="bi bi-twitter mx-1"></i> 
                       <i className="bi bi-facebook mx-1"></i> 
@@ -444,17 +445,18 @@ const Concile = () => {
         >
           {selectedCharacter && (
             <div className="modal-content">
-              <button onClick={closeModal} className="close-button">X</button>
+              <button onClick={closeModal} className="close-button" id='boton-cierre'>X</button>
               <div className="modal-body">
-                <h3>{selectedCharacter.name}</h3>
-                <h5><b>Nombre de Ifa</b>: {selectedCharacter.secondName}</h5>
-                <h5><b>Cargo en el concilio:</b> {selectedCharacter.title}</h5>
+                <h3 id='nombre-babalawo'>{selectedCharacter.name}</h3>
+                <h5 id='nombre-ifa'><b>Nombre de Ifa</b>: {selectedCharacter.secondName}</h5>
+                <h5 id='cargo-concilio'><b>Cargo en el concilio:</b> {selectedCharacter.title}</h5>
                 <p>{selectedCharacter.detailedDescription}</p>
               </div>
             </div>
           )}
         </Modal>
       </section>
+
       <div className='div-separador'>
       <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -467,11 +469,13 @@ const Concile = () => {
         </svg>
       </div>
       </div>
+
+      {/* seccion de cierre */}
       <section className='section-padding'>
         <div className='container miniSectionServices'>
           <div className="row gy-5 pb-5 pt-5" style={{ perspective: 360 }}>
             <motion.div variants={fadeIn('backward', 0.2)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
-              <p className="text-center">
+              <p className="text-center" id='contenido-invitacion'>
                 A través de su experiencia, conocimiento y contribuciones significativas, estos líderes 
                 y figuras importantes han enriquecido la vida de nuestra comunidad y han sido parte fundamental 
                 en el crecimiento continuo de Egbe Iwory Aweda. Su guía espiritual y compromiso con la 
@@ -496,6 +500,7 @@ const Concile = () => {
           </div>
         </div>
       </section>
+      
       <motion.div className="fondoLateral5" variants={fadeIn('up', 0.4)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
         <img src={FondoIzquierdo} alt="ikin" />
       </motion.div>

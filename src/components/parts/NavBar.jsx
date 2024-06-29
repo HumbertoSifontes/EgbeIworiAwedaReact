@@ -1,17 +1,20 @@
 import React, { useRef } from 'react';
 import simboloEgbe from '../images/simbolo-egbe.png';
 import { Link, useLocation } from 'react-router-dom';
-import DarkMode from '../../animations/DarkMode'
+import DarkMode from '../../animations/DarkMode';
 
+// Componente de barra de navegación del sitio web
 function Navbar() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const navbarCollapseRef = useRef(null);
 
+  // Función para obtener la clase de enlace de navegación activa
   const getNavLinkClass = (path) => {
     return location.pathname === path ? 'nav-link active' : 'nav-link';
   };
 
+  // Función para manejar el clic en los enlaces de navegación
   const handleNavLinkClick = () => {
     const collapseElement = navbarCollapseRef.current;
     if (collapseElement && window.getComputedStyle(collapseElement).display === 'block') {
@@ -20,7 +23,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Navegación principal">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/" onClick={handleNavLinkClick}>
           <img
@@ -29,6 +32,7 @@ function Navbar() {
             width={30}
             height={24}
             className="d-inline-block align-text-left logo"
+            loading="lazy" // Lazy loading para la imagen del logo
           />
           <span className='textoNav'>Egbe Iwori Aweda</span>
         </Link>
@@ -39,7 +43,7 @@ function Navbar() {
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Alternar navegación"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -78,9 +82,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               {isHomePage ? (
-                <a className="nav-link cta" href="#contact" onClick={handleNavLinkClick}>Contactanos</a>
+                <a className="nav-link cta" href="#contact" onClick={handleNavLinkClick}>Contáctanos</a>
               ) : (
-                <Link className={getNavLinkClass('/contact')} to="/contact" onClick={handleNavLinkClick}>Contactanos</Link>
+                <Link className={getNavLinkClass('/contact')} to="/contact" onClick={handleNavLinkClick}>Contáctanos</Link>
               )}
             </li>
             <li className="nav-item">

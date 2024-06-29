@@ -16,10 +16,11 @@ import { fadeIn } from '../../animations/variants'
 const Desempeño = () => {
   return (
     <>
-      <section>
+    {/* seccion titular de presentacion*/}
+      <section aria-labelledby='titulo-presentacion-servicios'>
         <div className="container textoH3" id='divVideoFondo'>
           <motion.div className="porpouse-text textoVideoFondo" variants={fadeIn('down', 0.2)} initial='hidden' animate='show' exit='hidden'>
-            <h3 className='textoFondo'>En Egbe Iwori Aweda, ofrecemos una variedad de 
+            <h3 className='textoFondo' id='titulo-presentaacion-servicios'>En Egbe Iwori Aweda, ofrecemos una variedad de 
               servicios relacionados con la religión Yoruba que 
               pueden ayudarte a encontrar tu camino. Los servicios 
               específicos que ofrecemos incluyen:
@@ -30,9 +31,10 @@ const Desempeño = () => {
           </motion.div>
           <video
             src={VideoFondo}
-            alt={'Fondo'}
+            alt={'Video-Fondo'}
             id={"videoFondo"}
             className={"img-fluid"}
+            loading="lazy"
             controls
             autoPlay
             loop
@@ -41,6 +43,7 @@ const Desempeño = () => {
           <div className="capaVideoFondo"></div>
         </div>
       </section>
+
       <div className='div-separadorVideo'>
         <div className='miniSectionServices'>
           <div className="custom-shape-divider-top-1716557548">
@@ -50,27 +53,30 @@ const Desempeño = () => {
           </div>
         </div>
       </div>
-      <section className='section-padding'>
+
+      {/* seccion servicio idafa*/}
+      <section className='section-padding' aria-labelledby='titulo-servicios-idafa'>
         <div className="container miniSectionServices" id='next'>
           <div className="row">
             <div className="col-lg-4 col-md-12 col-12 img-sobre">
               <motion.div variants={fadeIn('up', 0.2)} initial='hidden' animate='show' exit='hidden' className="about-img">
                 <img
                   src={servicios}
-                  alt={'Nosotros'}
+                  alt={'iadfa'}
                   id={"about-image"}
                   className={"img-fluid"}
+                  loading="lazy"
                 />
               </motion.div>
             </div>
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div variants={fadeIn('down', 0.2)} initial='hidden' animate='show' exit='hidden'>
-                  <h2>Idafa</h2>
+                  <h2 id='titulo-servicio-idafa'>Idafa</h2>
                 </motion.div>
                 <br />
                 <motion.div variants={fadeIn('left', 0.2)} initial='hidden' animate='show' exit='hidden'>
-                  <p>
+                  <p id='contenido-servicios-idafa'>
                     Se trata de obtener los mensajes revelados por Ifá a través 
                     del okpele o los ikines. No existe una razón por la cual una 
                     persona no pueda consultar Ifá, puede ser consultado para 
@@ -87,6 +93,7 @@ const Desempeño = () => {
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
         <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -105,17 +112,19 @@ const Desempeño = () => {
           </svg>
         </div>
       </div>
-      <section className='section-padding'>
+
+      {/* seccion servicios esentaye*/}
+      <section className='section-padding' aria-labelledby='titulo-servicios-esentaye'>
         <div className='container miniSectionServices'>
           <div className="row py-5">
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div variants={fadeIn('right', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h2>Esentaye</h2>
+                  <h2 id='titulo-servicios-esentaye'>Esentaye</h2>
                 </motion.div>
                 <br />
                 <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p>
+                  <p id='contenido-servicios-esentaye'>
                     Esentaye es el ritual práctico dado a un nuevo bebé, en el rango de 
                     los primeros 16 días del nacimiento. El Babalawo busca a través del 
                     oráculo de Ifá, mas los rituales que abarcan en este procedimiento 
@@ -135,6 +144,7 @@ const Desempeño = () => {
                   alt={'esentaye'}
                   id={"about-image"}
                   className={"img-fluid"}
+                  loading='lazy'
                 />
               </motion.div>
             </div>
@@ -206,6 +216,7 @@ const Desempeño = () => {
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
         <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -224,7 +235,9 @@ const Desempeño = () => {
           </svg>
         </div>
       </div>
-      <section className='section-padding'>
+
+      {/* seccion servicios adimu*/}
+      <section className='section-padding' aria-labelledby='titulo-servicios-adimu'>
         <div className="container miniSectionServices">
           <div className="row">
             <div className="col-lg-4 col-md-12 col-12 img-sobre">
@@ -234,16 +247,17 @@ const Desempeño = () => {
                   alt={'adimu'}
                   id={"about-image"}
                   className={"img-fluid"}
+                  loading='lazy'
                 />
               </motion.div>
             </div>
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div variants={fadeIn('up', 0.4)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h2>Adimú</h2>
+                  <h2 id='titulo-servicios-adimu'>Adimú</h2>
                 </motion.div>
                 <motion.div variants={fadeIn('right', 0.4)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p>
+                  <p id='contenido-servicios-adimu'>
                     Se trata de presentar una ofrenda a los Orisas y Deidades 
                     con el fin de utilizarla como catalizador de energías para 
                     nuestro beneficio. La forma en que es ofrecido un Adimú va 
@@ -256,6 +270,7 @@ const Desempeño = () => {
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
         <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -274,16 +289,18 @@ const Desempeño = () => {
           </svg>
         </div>
       </div>
-      <section className='section-padding'>
+
+      {/* seccion servicios akose*/}
+      <section className='section-padding' aria-labelledby='titulo-servicios-akose'>
         <div className="container miniSectionServices">
           <div className="row">
             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 textoSobre">
               <div className="about-text">
                 <motion.div variants={fadeIn('right', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h2>Akose</h2>
+                  <h2 id='titulo-servicios-akose'>Akose</h2>
                 </motion.div>
                 <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p>
+                  <p id='contenido-servicios-akose'>
                     Akose es un preparado medicinal de ifa donde un babalawo tiene que 
                     utilizar variedad de productos como hierbas, hojas, raíces, plumas, 
                     Iyerosun y otros materiales para producir los akose ifa. Esto es totalmente 
@@ -303,12 +320,14 @@ const Desempeño = () => {
                   alt={'akose'}
                   id={"about-image"}
                   className={"img-fluid"}
+                  loading='lazy'
                 />
               </motion.div>
             </div>
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
         <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -327,17 +346,19 @@ const Desempeño = () => {
           </svg>
         </div>
       </div>
-      <section className='section-padding'>
+
+      {/* seccion servicios ebo riru*/}
+      <section className='section-padding' aria-labelledby='titulo-servicios-ebo-riru'>
         <div className='container miniSectionServices'>
           <div className="row">
             <div className="col-lg-6 col-md-12 col-12">
               <div className="porpouse-text textoServicios">
                 <motion.div variants={fadeIn('right', 0.6)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <h2>Ebo riru</h2>
+                  <h2 id='titulo-servicios-ebo-riru'>Ebo riru</h2>
                 </motion.div>
                 <br />
                 <motion.div variants={fadeIn('right', 0.2)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
-                  <p>
+                  <p id='contenido-servicios-ebo-riru'>
                     Se trata de un acto poderoso de sacrificios y rituales para 
                     que el cliente logre canalizar la energía de las fuerzas de 
                     la naturaleza a su favor. Es a través de este sacrifício que 
@@ -394,19 +415,17 @@ const Desempeño = () => {
               <motion.div className="about-img" variants={fadeIn('left', 0.4)} initial='hidden' whileInView='show' exit='hidden'  viewport={{ once: true }} layoutScroll>
                 <img
                   src={Servicios1}
-                  alt={'Nosotros'}
+                  alt={'ebo-riru'}
                   id={"about-image"}
                   className={"img-fluid"}
-                  controls
-                  autoPlay
-                  loop
-                  muted
+                  loading='lazy'
                 />
               </motion.div>
             </div>
           </div>
         </div>
       </section>
+
       <div className='div-separador'>
         <div className="custom-shape-divider-bottom-1716559100 separadorBottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -425,11 +444,13 @@ const Desempeño = () => {
           </svg>
         </div>
       </div>
-      <section className='section-padding'>
+
+      {/* seccion de llamada a la accion*/}
+      <section className='section-padding' aria-labelledby='llamada a la accion'>
         <div className='container miniSectionServices'>
           <div className="row gy-5 pb-5 pt-5" style={{ perspective: 360 }}>
             <motion.div variants={fadeIn('backward', 0.2)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
-              <p className="text-center">
+              <p className="text-center" id='contenido-invitacion'>
                 En el Egbe Iwori Aweda, nos enorgullecemos de nuestro compromiso inquebrantable con las 
                 tradiciones de Ifá y Orisa. Nuestro enfoque está basado en la autenticidad, la devoción 
                 y el profundo conocimiento transmitido a través de generaciones. Al elegir nuestros servicios, 
@@ -443,16 +464,17 @@ const Desempeño = () => {
           </div>
           <div className="row gy-5" style={{ perspective: 360 }}>
             <motion.div variants={fadeIn('backward', 0.4)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
-              <Link className='ctaText' to="/contact"><h1 className='pb-5 ctaText text-center'>¡Agenda una Cita Hoy Mismo!</h1></Link>
+              <Link className='ctaText' to="/contact"><h1 className='pb-5 ctaText text-center' id='invitacion-cita'>¡Agenda una Cita Hoy Mismo!</h1></Link>
             </motion.div>
           </div >
           <div className="row gy-5" style={{ perspective: 360 }}>
             <motion.div variants={fadeIn('backward', 0.6)} initial='hidden' whileInView='show' exit='hidden'  layoutScroll>
-              <Link to="/contact" className="btn btn-success d-grid gap-2 col-6 mx-auto text-white cta">Contactanos</Link>
+              <Link to="/contact" className="btn btn-success d-grid gap-2 col-6 mx-auto text-white cta" id='boton-invitacion'>Contactanos</Link>
             </motion.div>
           </div>
         </div>
       </section>
+
       <motion.div className="fondoLateral6" variants={fadeIn('up', 0.2)} initial='hidden' animate='show' exit='hidden'>
         <img src={FondoDerecho} alt="esu" />
       </motion.div>

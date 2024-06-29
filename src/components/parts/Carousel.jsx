@@ -6,8 +6,8 @@ import egbeMobile from '../images/carruselResponsive1.jpg';
 import ceremoniasMobile from '../images/carruselResponsive2.jpg';
 import oseMobile from '../images/carruselResponsive3.jpg';
 
-
 const Carrusel = () => {
+  // Estado para manejar las imágenes según el tamaño de la pantalla
   const [images, setImages] = useState({
     egbe: egbeDesktop,
     ceremonias: ceremoniasDesktop,
@@ -31,14 +31,17 @@ const Carrusel = () => {
       }
     };
 
+    // Actualizar imágenes al cargar el componente y al cambiar el tamaño de la pantalla
     updateImages();
     window.addEventListener('resize', updateImages);
 
+    // Limpiar el evento al desmontar el componente
     return () => window.removeEventListener('resize', updateImages);
   }, []);
 
   return (
     <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      {/* Indicadores del carrusel */}
       <div className="carousel-indicators">
         <button
           type="button"
@@ -61,6 +64,8 @@ const Carrusel = () => {
           aria-label="Slide 3"
         ></button>
       </div>
+
+      {/* Contenido del carrusel */}
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src={images.egbe} className="d-block w-100" alt="Egbe" />
@@ -80,10 +85,12 @@ const Carrusel = () => {
           <img src={images.ose} className="d-block w-100" alt="Ose" />
           <div className="carousel-caption d-none d-md-block">
             <h5>OseItaDOgun</h5>
-            <p>Ceremonia de limpieza astral del Egbe cada 17 dias</p>
+            <p>Ceremonia de limpieza astral del Egbe cada 17 días</p>
           </div>
         </div>
       </div>
+
+      {/* Controles del carrusel */}
       <button
         className="carousel-control-prev"
         type="button"
